@@ -8,5 +8,6 @@ description: "do something with docker"
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  just_do_something_job:
-    run: 'echo hi'
+  jobs:
+    just_do_something_job:
+      run: 'echo hi'
