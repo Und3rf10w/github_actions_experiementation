@@ -29,4 +29,4 @@ jobs:
     steps:
     - name: Run the docker action
       id: hello_docker
-      uses: actions/build_on_docker_branch_job@docker_tag
+      uses: actions/build_on_docker_branch_job@docker_branch
