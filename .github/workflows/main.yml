@@ -16,7 +16,7 @@ jobs:
       run: bats -v
   build_on_docker_branch_job:
     runs-on: ubuntu-latest
-    name: say hello
+    name: docker
     if: github.ref == 'refs/heads/docker'
     steps:
     - name: Run the docker action
