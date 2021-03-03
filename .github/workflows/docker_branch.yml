@@ -2,7 +2,4 @@ name: build_on_docker_branch
 runs:
   using: 'docker'
   image: 'Dockerfile'
-jobs:
-  just_do_something_job:
-    steps:
-    - run: 'echo hi'
+
