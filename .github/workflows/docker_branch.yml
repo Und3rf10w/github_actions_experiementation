@@ -1,10 +1,4 @@
-on:
-  push:
-    branches:
-    - docker
-
 name: build_on_docker_branch
-runs-on: ubuntu:latest
 runs:
   using: 'docker'
   image: 'Dockerfile'
