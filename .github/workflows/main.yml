@@ -21,3 +21,11 @@ jobs:
 
     - name: run bats
       run: bats -v
+
+  build_on_docker_branch_job:
+    runs-on: ubuntu-latest
+    name: say hello
+    steps:
+    - name: Run the docker action
+      id: hello_docker
+      uses: actions/build_on_docker_branch_job
