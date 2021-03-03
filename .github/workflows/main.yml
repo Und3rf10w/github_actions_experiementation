@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-    - docker
   pull_request:
     branches:
     - main
@@ -22,13 +21,3 @@ jobs:
 
     - name: run bats
       run: bats -v
-
-  build_on_docker_branch_job:
-    runs-on: ubuntu-latest
-    name: say hello
-    steps:
-    - name: Run the docker action
-      id: hello_docker
-      uses: und3rf10w/github_actions_experiementation@docker
-      with:
-        who-to-greet: "you"

@@ -1,14 +1,19 @@
 name: build_on_docker_branch
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+
+on:
+  push:
+    branches:
+    - docker
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+
+jobs:
+  build_on_docker_branch_job:
+    runs-on: ubuntu-latest
+    name: say hello
+    steps:
+    - name: Run the docker action
+      id: hello_docker
+      uses: und3rf10w/github_actions_experiementation@docker
