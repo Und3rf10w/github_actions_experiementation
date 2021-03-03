@@ -1,3 +1,7 @@
+on:
+  push:
+    branches:
+    - docker
 name: build_on_docker_branch
 description: "do something with docker"
 runs:
