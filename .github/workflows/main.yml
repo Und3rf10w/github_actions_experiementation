@@ -29,4 +29,6 @@ jobs:
     steps:
     - name: Run the docker action
       id: hello_docker
-      uses: und3rf10w/github_actions_experiementation@docker_branch
+      uses: und3rf10w/github_actions_experiementation@docker
+      with:
+        who-to-greet: "you"
