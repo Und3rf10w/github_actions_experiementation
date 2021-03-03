@@ -1,18 +1,5 @@
-name: build_on_docker_branch 
-
-on:
-  push:
-    branches:
-    - docker
-  pull_request:
-    branches:
-    - docker
-
-jobs:
-  docker_build:
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
-    steps:
-        - name: "hello world"
-          run: bash -V
+name: build_on_docker_branch
+description: "do something with docker"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
