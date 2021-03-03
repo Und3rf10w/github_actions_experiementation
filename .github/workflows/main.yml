@@ -1,0 +1,23 @@
+name: github_actions_experimentation
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+    - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - uses: actions/setup-node@v1
+
+    - name: install bats
+      run : npm install -g bats
+
+    - name: run bats
+      run: bats -v
