@@ -1,0 +1,15 @@
+name: build_on_docker_branch 
+
+on:
+  push:
+    branches:
+    - docker
+  pull_request:
+    branches:
+    - docker
+
+jobs:
+  docker_build:
+    runs:
+      using: 'docker'
+      image: 'Dockerfile'
