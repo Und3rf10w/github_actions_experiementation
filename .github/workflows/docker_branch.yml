@@ -10,4 +10,5 @@ runs:
   image: 'Dockerfile'
 jobs:
   just_do_something_job:
-    run: 'echo hi'
+    steps:
+    - run: 'echo hi'
