@@ -1,19 +1,5 @@
 name: build_on_docker_branch
 
-on:
-  push:
-    branches:
-    - docker
-
 runs:
   using: 'docker'
   image: 'Dockerfile'
-
-jobs:
-  build_on_docker_branch_job:
-    runs-on: ubuntu-latest
-    name: say hello
-    steps:
-    - name: Run the docker action
-      id: hello_docker
-      uses: und3rf10w/github_actions_experiementation@docker

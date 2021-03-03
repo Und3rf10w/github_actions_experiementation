@@ -1,13 +1,6 @@
 name: github_actions_experimentation
 
-on:
-  push:
-    branches:
-    - main
-  pull_request:
-    branches:
-    - main
-    - dev
+on: push
 
 jobs:
   build:
@@ -21,3 +14,11 @@ jobs:
 
     - name: run bats
       run: bats -v
+  build_on_docker_branch_job:
+    runs-on: ubuntu-latest
+    name: say hello
+    if: github.ref == 'refs/heads/docker'
+    steps:
+    - name: Run the docker action
+      id: hello_docker
+      uses: und3rf10w/github_actions_experiementation@docker
