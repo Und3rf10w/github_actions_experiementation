@@ -3,7 +3,7 @@ name: docker_branch_push
 on: 
   push:
     branches:
-      - main
+      - docker
 
 jobs:
   build_on_docker_branch_job:
