@@ -14,11 +14,3 @@ jobs:
 
     - name: run bats
       run: bats -v
-  build_on_docker_branch_job:
-    runs-on: ubuntu-latest
-    name: docker
-    if: github.ref == 'refs/heads/docker'
-    steps:
-    - name: Run the docker action
-      id: hello_docker
-      uses: und3rf10w/github_actions_experiementation@docker
