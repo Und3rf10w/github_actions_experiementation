@@ -8,3 +8,13 @@ on:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+
+jobs:
+  build_on_docker_branch_job:
+    runs-on: ubuntu-latest
+    name: say hello
+    if: github.ref == 'refs/heads/docker'
+    steps:
+    - name: Run the docker action
+      id: hello_docker
+      uses: und3rf10w/github_actions_experiementation@docker
