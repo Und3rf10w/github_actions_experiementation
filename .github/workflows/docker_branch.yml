@@ -5,13 +5,12 @@ on:
     branches:
       - docker
 
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-
 jobs:
   build_on_docker_branch_job:
     runs-on: ubuntu-latest
+    runs:
+      - using: 'docker'
+        image: 'Dockerfile'
     name: say hello
     if: github.ref == 'refs/heads/docker'
     steps:
