@@ -1,5 +1,10 @@
 name: build_on_docker_branch
 
+on:
+  push:
+    branches:
+      - docker
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
